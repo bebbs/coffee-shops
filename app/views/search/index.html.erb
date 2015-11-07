@@ -5,6 +5,9 @@
   </form>
 
   <section class="results">
-    <%= flash[:no_results] %>
+    <% if flash[:no_results] %>
+      <p><%= flash[:no_results] %></p>
+      <p><%= link_to 'Reset Search', root_path %></p>
+    <% end %>
   </section>
 </article>
