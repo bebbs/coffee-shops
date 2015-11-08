@@ -16,6 +16,13 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require_relative 'support/fake_geocode.rb'
+
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
+
+
 RSpec.configure do |config|
   config.before :each do
     stub_request(:any, /api.postcodes.io/).to_rack(FakeGeocode)
