@@ -18,6 +18,7 @@ class FoursquareApi
     params = {
       v: "20151108",
       m: "foursquare",
+      radius: 800,
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET,
       ll: "#{lat},#{long}",

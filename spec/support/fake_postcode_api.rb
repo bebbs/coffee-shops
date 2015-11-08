@@ -2,7 +2,12 @@ require 'sinatra/base'
 
 class FakePostcodeApi < Sinatra::Base
   get '/postcodes/:postcode' do
-    json_response 200, 'locations.json'
+    bad_postcode = "B4D1NPUT"
+    if params[:postcode] == bad_postcode
+      json_response 404, 'no_locations.json'
+    else
+      json_response 200, 'locations.json'
+    end
   end
 
   private

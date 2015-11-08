@@ -26,7 +26,6 @@ section#header {
 }
 
 /* SEARCH */
-
 form.search {
   margin: 0 auto;
   width: 32rem;
@@ -37,4 +36,27 @@ form.search input {
 
 form.search input[type=search] {
   width: 20rem;
+}
+
+/* COFFEE SHOP LISTING */
+ul.coffee-shops {
+  list-style: none;
+  max-width: 25em;
+  margin: 0 auto;
+}
+
+ul.coffee-shops li {
+  background-color: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+li.listing span.listing-name {
+  display: block;
+  font-weight: bold;
+}
+
+li.listing span.listing-rating {
+  color: #ddd;
 }

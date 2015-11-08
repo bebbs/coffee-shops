@@ -5,9 +5,13 @@
   </form>
 
   <section class="results">
-    <% if flash[:no_results] %>
-      <p><%= flash[:no_results] %></p>
+    <% if @coffee_shops.empty? && @postcode %>
+      <p>There are no results, please search again</p>
       <p><%= link_to 'Reset Search', root_path %></p>
+    <% else %>
+      <ul class="coffee-shops">
+        <%= render @coffee_shops %>
+      </ul>
     <% end %>
   </section>
 </article>

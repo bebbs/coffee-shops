@@ -7,7 +7,11 @@ class PostcodeApi
   def self.fetch postcode
     postcode.delete!(" ")
     res = get_response_body postcode
-    get_coordinates res
+    if res["status"] == 404
+      nil
+    else
+      get_coordinates res
+    end
   end
 
   private

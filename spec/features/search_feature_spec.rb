@@ -26,4 +26,19 @@ feature 'Searching for a coffee shop' do
       expect(page).not_to have_content('There are no results, please search again')
     end
   end
+
+  context 'When there is a coffee shop near the postcode' do
+    before do
+      fill_in('postcode', with: 'SW1 1AA')
+      click_button('Search')
+    end
+
+    it 'Displays the name of a coffee shop' do
+      expect(page).to have_content('Coffee Geek and Friends')
+    end
+
+    it 'Displays the address of a coffee shop' do
+      expect(page).to have_content('Unit 22 Cardinal Place')
+    end
+  end
 end
