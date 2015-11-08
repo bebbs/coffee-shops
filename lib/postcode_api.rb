@@ -7,7 +7,6 @@ class PostcodeApi
   def self.fetch postcode
     postcode.delete!(" ")
     res = get_response_body postcode
-
     get_coordinates res
   end
 
@@ -21,7 +20,6 @@ class PostcodeApi
   def self.get_response_body postcode
     uri = URI(API_URL + "/#{postcode}")
     res = Net::HTTP.get_response(uri)
-
     JSON.parse(res.body)
   end
 end
