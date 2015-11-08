@@ -17,7 +17,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require_relative 'support/fake_geocode.rb'
+require_relative 'support/fake_postcode_api.rb'
+require_relative 'support/fake_foursquare_api.rb'
 
 require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
@@ -25,7 +26,8 @@ WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
   config.before :each do
-    stub_request(:any, /api.postcodes.io/).to_rack(FakeGeocode)
+    stub_request(:any, /api.postcodes.io/).to_rack(FakePostcodeApi)
+    stub_request(:any, /api.foursquare.com/).to_rack(FakeFoursquareApi)
   end
 
   # rspec-expectations config goes here. You can use an alternate

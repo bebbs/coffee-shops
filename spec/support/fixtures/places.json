@@ -1,0 +1,196 @@
+{
+  "meta":{
+    "code":200,
+    "requestId":"563f87e8498e69990d48e45e"
+  },
+  "response":{
+    "venues":[
+      {
+        "id":"5565c24d498e2885d1b9a54e",
+        "name":"Coffee Geek and Friends",
+        "location":{
+          "address":"Unit 22 Cardinal Place",
+          "crossStreet":"6 Cathedral Walk",
+          "lat":51.497508,
+          "lng":-0.141354,
+          "distance":395,
+          "postalCode":"SW1E 5JH",
+          "cc":"GB",
+          "city":"London",
+          "state":"Greater London",
+          "country":"United Kingdom",
+          "formattedAddress":[
+            "Unit 22 Cardinal Place (6 Cathedral Walk)",
+            "London",
+            "Greater London",
+            "SW1E 5JH",
+            "United Kingdom"
+          ]
+        },
+        "categories":[
+          {
+            "id":"4bf58dd8d48988d1e0931735",
+            "name":"Coffee Shop",
+            "pluralName":"Coffee Shops",
+            "shortName":"Coffee Shop",
+            "icon":{
+              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+              "suffix":".png"
+            },
+            "primary":true
+          }
+        ],
+        "verified":false,
+        "stats":{
+          "checkinsCount":123,
+          "usersCount":60,
+          "tipCount":4
+        },
+        "allowMenuUrlEdit":true,
+        "specials":{
+          "count":0,
+          "items":[
+
+          ]
+        },
+        "hereNow":{
+          "count":0,
+          "summary":"Nobody here",
+          "groups":[
+
+          ]
+        },
+        "referralId":"v-1447004136",
+        "venueChains":[
+
+        ]
+      },
+      {
+        "id":"5082d072e4b09e409c582ab4",
+        "name":"TAP Coffee No. 193",
+        "location":{
+          "address":"193 Wardour St",
+          "crossStreet":"btwn Oxford St & Noel St",
+          "lat":51.51551738660368,
+          "lng":-0.13550419513536296,
+          "distance":1716,
+          "postalCode":"W1F 8ZF",
+          "cc":"GB",
+          "city":"Soho",
+          "state":"Greater London",
+          "country":"United Kingdom",
+          "formattedAddress":[
+            "193 Wardour St (btwn Oxford St & Noel St)",
+            "Soho",
+            "Greater London",
+            "W1F 8ZF",
+            "United Kingdom"
+          ]
+        },
+        "categories":[
+          {
+            "id":"4bf58dd8d48988d1e0931735",
+            "name":"Coffee Shop",
+            "pluralName":"Coffee Shops",
+            "shortName":"Coffee Shop",
+            "icon":{
+              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+              "suffix":".png"
+            },
+            "primary":true
+          }
+        ],
+        "verified":false,
+        "stats":{
+          "checkinsCount":5195,
+          "usersCount":2060,
+          "tipCount":159
+        },
+        "allowMenuUrlEdit":true,
+        "specials":{
+          "count":0,
+          "items":[
+
+          ]
+        },
+        "hereNow":{
+          "count":2,
+          "summary":"2 people are here",
+          "groups":[
+            {
+              "type":"others",
+              "name":"Other people here",
+              "count":2,
+              "items":[
+
+              ]
+            }
+          ]
+        },
+        "referralId":"v-1447004136",
+        "venueChains":[
+
+        ]
+      },
+      {
+        "id":"4ac518edf964a520c1ac20e3",
+        "name":"Monmouth Coffee Company",
+        "location":{
+          "address":"27 Monmouth St",
+          "lat":51.5143371575025,
+          "lng":-0.12698470051018282,
+          "distance":1874,
+          "postalCode":"WC2H 9EU",
+          "cc":"GB",
+          "city":"Holborn and Covent Garden",
+          "state":"Greater London",
+          "country":"United Kingdom",
+          "formattedAddress":[
+            "27 Monmouth St",
+            "Holborn and Covent Garden",
+            "Greater London",
+            "WC2H 9EU",
+            "United Kingdom"
+          ]
+        },
+        "categories":[
+          {
+            "id":"4bf58dd8d48988d1e0931735",
+            "name":"Coffee Shop",
+            "pluralName":"Coffee Shops",
+            "shortName":"Coffee Shop",
+            "icon":{
+              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+              "suffix":".png"
+            },
+            "primary":true
+          }
+        ],
+        "verified":false,
+        "stats":{
+          "checkinsCount":11042,
+          "usersCount":4642,
+          "tipCount":282
+        },
+        "allowMenuUrlEdit":true,
+        "specials":{
+          "count":0,
+          "items":[
+
+          ]
+        },
+        "hereNow":{
+          "count":0,
+          "summary":"Nobody here",
+          "groups":[
+
+          ]
+        },
+        "referralId":"v-1447004136",
+        "venueChains":[
+
+        ]
+      }
+    ]
+  }
+}

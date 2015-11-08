@@ -1,6 +1,6 @@
 require 'net/http'
 
-class Geocode
+class PostcodeApi
 
   API_URL = "https://api.postcodes.io/postcodes"
 

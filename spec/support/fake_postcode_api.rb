@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class FakeGeocode < Sinatra::Base
+class FakePostcodeApi < Sinatra::Base
   get '/postcodes/:postcode' do
     json_response 200, 'locations.json'
   end
