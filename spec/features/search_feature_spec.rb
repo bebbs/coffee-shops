@@ -41,4 +41,23 @@ feature 'Searching for a coffee shop' do
       expect(page).to have_content('Unit 22 Cardinal Place')
     end
   end
+
+  context 'Coffee shops are ordered by the number of checkins' do
+    before do
+      fill_in('postcode', with: 'SW1 1AA')
+      click_button('Search')
+    end
+
+    it 'Highest ranked first' do
+      within('ul.coffee-shops li:nth-child(1)') do
+        expect(page).to have_css('span.listing-name', text: 'Monmouth Coffee Company')
+      end
+    end
+
+    it 'Lowest ranked last' do
+      within('ul.coffee-shops li:nth-child(3)') do
+        expect(page).to have_css('span.listing-name', text: 'Coffee Geek and Friends')
+      end
+    end
+  end
 end
