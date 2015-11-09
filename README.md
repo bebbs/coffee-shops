@@ -2,7 +2,7 @@
 
 CoffeeHere is an application that, given a postcode, displays a list of nearby coffee shops, ordered by popularity. There is also a map vew.
 
-See the application live on Heroku - https://coffeehere.herokuapp.com
+[See the application live on Heroku](https://coffeehere.herokuapp.com)
 
 ## How to run the application
 *You must have Ruby and Ruby on Rails installed to run this application.*
@@ -38,3 +38,4 @@ Given more time to work on this project, I'd like to improve or add the followin
 
 - The popularity of a coffee shop is currently the sum of all its checkins. It would be more robust to have more attributes contribute to this score, and experiment with weighting different factors.
 - Find a way to effectively test the Google Maps implementation.
+- Decouple presentation from logic in some of the views. Particularly the maps view.
