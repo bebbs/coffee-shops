@@ -9,6 +9,12 @@ feature 'Searching for a coffee shop' do
     it 'Displays a post code input' do
       expect(page).to have_field('postcode')
     end
+
+    it 'Blank postcode input displays a no results message' do
+      click_button('Search')
+
+      expect(page).to have_content('There are no results, please search again')
+    end
   end
 
   context 'When there are no coffee shops near the postcode' do
