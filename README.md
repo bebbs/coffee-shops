@@ -1,6 +1,6 @@
 # CoffeeHere
 
-CoffeeHere is an application that, given a postcode, displays a list of nearby coffee shops, ordered by popularity. There is also a map vew.
+CoffeeHere is an application that, given a postcode, displays a number of nearby coffee shops. The shops can be displayed in a list, or on a map.
 
 [See the application live on Heroku](https://coffeehere.herokuapp.com)
 
