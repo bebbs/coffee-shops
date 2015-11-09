@@ -6,10 +6,12 @@
       <p>There are no results, please search again</p>
       <p><%= link_to 'Reset Search', root_path %></p>
     <% else %>
-      <section class="results-view">
-        <a href="#" id="list">List view</a>
-        <a href="#" id="map">Map view</a>
-      </section>
+      <% if @coffee_shops.count > 0 %>
+        <section class="results-view">
+          <a href="#" id="list">List view</a>
+          <a href="#" id="map">Map view</a>
+        </section>
+      <% end %>
       <ul class="coffee-shops">
         <%= render @coffee_shops %>
       </ul>
