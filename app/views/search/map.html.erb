@@ -9,6 +9,7 @@
 
       function initialize() {
         var bounds = new google.maps.LatLngBounds();
+        var infowindow = new google.maps.InfoWindow();
 
         var mapDiv = document.getElementById("map");
         var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -28,6 +29,14 @@
 
           // Extend the map bounds to fit the new marker
           bounds.extend(marker.position);
+
+          // Add an infowindow
+          google.maps.event.addListener(marker, 'click', (function(marker) {
+            return function() {
+              infowindow.setContent("<%= shop.name %> (<%= shop.popularity %>)");
+              infowindow.open(map, marker);
+            }
+          })(marker));
         <% end %>
 
         map.fitBounds(bounds)
