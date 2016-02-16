@@ -1,16 +1,17 @@
 # CoffeeHere
 
-CoffeeHere is an application that, given a postcode, displays a number of nearby coffee shops. The shops can be displayed in a list, or on a map.
+CoffeeHere is an application that, given a postcode, displays a number of nearby coffee shops. The shops can be displayed in a list, ordered by their Foursquare popularity, or on a map.
 
 [See the application live on Heroku](https://coffeehere.herokuapp.com)
 
 ## How to run the application
 *You must have Ruby and Ruby on Rails installed to run this application.*
 
-1. Change into the CoffeeHere directory
-2. Run `bundle install` to install all dependencies
-3. Run `rails server` to start the application and visit `http://localhost:3000` in your browser to use it.
-4. You may have to create a database to run the Rails server. Run `rake db:create` if prompted.
+1. `cd` into the CoffeeHere directory
+2. Set the environment variables `FOURSQUARE_CLIENT_ID` and `FOURSQUARE_CLIENT_SECRET` with your own credentials.
+3. Run `bundle install` to install all dependencies
+4. Run `rails server` to start the application and visit `http://localhost:3000` in your browser to use it.
+5. You may have to create a database to run the Rails server. Run `rake db:create` if prompted.
 
 ## Technologies used
 ### Front end
@@ -24,7 +25,7 @@ CoffeeHere is an application that, given a postcode, displays a number of nearby
 
 ### Structure
 - *'Skinny' controller* - As the application makes use of several APIs, I abstracted the implementation of those away from the controller. I created a service object, `FindCoffeeShops`, that accepts a single postcode parameter from search_controller, and returns an array of CoffeeShop objects.
-- *Abstracted API calls* - The `FindCoffeeShops` service object controls calls to any external APIs. This means that any part of the application can find coffee shops, yet isn't concerned with its implementation.
+- *Abstracted API calls* - The `FindCoffeeShops` service object controls calls to any external APIs. This means that any part of the application can find coffee shops, yet isn't concerned with its implementation. The calls to the Foursquare and Postcode.io APIs are made in the `lib` folder.
 - *ActiveModel* - As I wasn't persisting information from 3rd party APIs, it didn't make sense to have full ActiveRecord models managing the domain logic. Instead I included ActiveModel into the CoffeeShop class, which provides simple ActiveRecord-like helpers and attributes.
 
 ### Testing
