@@ -2,8 +2,8 @@ require 'net/http'
 
 class FoursquareApi
   API_URL = "https://api.foursquare.com/v2/venues/search"
-  CLIENT_ID = ***REMOVED***
-  CLIENT_SECRET = ***REMOVED***
+  CLIENT_ID = ENV["FOURSQUARE_CLIENT_ID"]
+  CLIENT_SECRET = ENV["FOURSQUARE_CLIENT_SECRET"]
   COFFEE_SHOP_CAT_ID = "4bf58dd8d48988d1e0931735"
 
   def self.fetch coordinates
